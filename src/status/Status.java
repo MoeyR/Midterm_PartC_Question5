@@ -26,8 +26,12 @@ public class Status {
     Scanner in =new Scanner(System.in);
     System.out.println("Enter the user status code (zero,one,two,three) in string");
     String code = in.next();
-    StausUser t= new StausUser();
-    t.statusDetail(code); 
+    GenerateStatus g= new GenerateStatus();
+    g.statusDetail(); 
+        for(StausUser s : g.rank)
+        {
+            System.out.println(s.getStatusUser() + " "+s.getCodeUser());
+        }
     }
     
 }
